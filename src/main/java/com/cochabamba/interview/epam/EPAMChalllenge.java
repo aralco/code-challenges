@@ -1,4 +1,4 @@
-package com.cochabamba.interview;
+package com.cochabamba.interview.epam;
 
 import java.util.Arrays;
 import java.util.HashMap;

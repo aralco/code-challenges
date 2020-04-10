@@ -1,0 +1,1 @@
+This is a repository for solving code challenges in different platforms.

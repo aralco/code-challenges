@@ -1,4 +1,4 @@
-package com.cochabamba.interview;
+package com.cochabamba.interview.amazon;
 
 
 import java.util.ArrayList;

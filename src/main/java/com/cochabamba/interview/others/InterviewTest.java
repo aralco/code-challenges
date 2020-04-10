@@ -1,4 +1,4 @@
-package com.cochabamba.interview;
+package com.cochabamba.interview.others;
 
 //class X {
 //    static void staticMethod()	{

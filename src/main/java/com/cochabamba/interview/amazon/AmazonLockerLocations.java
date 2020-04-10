@@ -1,4 +1,4 @@
-package com.cochabamba.amazon;
+package com.cochabamba.interview.amazon;
 
 import java.util.*;
 
