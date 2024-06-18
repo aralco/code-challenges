@@ -50,28 +50,29 @@ public class FindingMiddleElementInLinkedList {
         }
         return tmp.data;
     }
-}
 
-class Node {
-    int data;
-    Node next;
-    Node(int d)  {
-        data = d;
-        next = null;
+    static class Node {
+        int data;
+        Node next;
+        Node(int d)  {
+            data = d;
+            next = null;
+        }
     }
-}
 
-class LinkedList {
-    Node head;  // head of list
-    public void addToTheLast(Node node) {
-        if (head == null) {
-            head = node;
-        } else {
-            Node temp = head;
-            while (temp.next != null)
-                temp = temp.next;
-            temp.next = node;
+    static class LinkedList {
+        Node head;  // head of list
+        public void addToTheLast(Node node) {
+            if (head == null) {
+                head = node;
+            } else {
+                Node temp = head;
+                while (temp.next != null)
+                    temp = temp.next;
+                temp.next = node;
+            }
         }
     }
 }
+
 

@@ -115,11 +115,12 @@ public class PrimeNumber_1 {
         else    {
             for(int i=n-1;i>=2;i--)  {
                 if(n%i==0)  {
-                    isPrime = !isPrime;
+                    isPrime = false;
                     break;
                 }
             }
         }
         return isPrime;
     }
+
 }

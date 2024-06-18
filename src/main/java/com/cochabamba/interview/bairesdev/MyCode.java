@@ -1,11 +1,14 @@
 package com.cochabamba.interview.bairesdev;
 
 // Write a function that returns true if the brackets in a given string are balanced.
-// The function must handle parens (), square brackets [], and curly braces {}.
+// The function must handle parenthesis (), square brackets [], and curly braces {}.
+
+import org.junit.Assert;
+import org.junit.Test;
 
 import java.util.*;
 
-class MyCode {
+public class MyCode {
     public static void main (String[] args) {
         System.out.println("(a[0]+b[2c[6]]) {24 + 53}  passed:" + parensMatch("(a[0]+b[2c[6]]) {24 + 53}"));
         System.out.println("f(e(d))                    passed:" + parensMatch("f(e(d))"));
@@ -22,7 +25,7 @@ class MyCode {
     }
 
     //best Solution
-    static boolean parensMatch(String sentence){
+    public static boolean parensMatch(String sentence){
         boolean result = true;
         char[] sentences = sentence.toCharArray();
         LinkedList<String > list = new LinkedList<>();
@@ -30,7 +33,7 @@ class MyCode {
             if(s=='(' || s=='[' || s=='{'){
                 list.push(String.valueOf(s));
             } else if(s==')' || s==']' || s=='}'){
-                if(!(!list.isEmpty() && isBalanced(list.pop(), String.valueOf(s)))) {
+                if(list.isEmpty() || !isBalanced(list.pop(), String.valueOf(s))) {
                     result = false;
                     break;
                 }
@@ -41,7 +44,7 @@ class MyCode {
         return result;
     }
 
-    static boolean isBalanced(String open, String close) {
+    public static boolean isBalanced(String open, String close) {
         boolean result = false;
         switch (open)  {
             case "(":
@@ -115,6 +118,17 @@ class MyCode {
         result = result && freq.get("sbO").equals(freq.get("sbC"));
         result = result && freq.get("cbO").equals(freq.get("cbC"));
         return result;
+    }
+
+    @Test
+    public void test()  {
+        Assert.assertTrue(parensMatch("(())"));
+        Assert.assertFalse(parensMatch("(()))"));
+        Assert.assertFalse(parensMatch("()))("));
+        Assert.assertTrue(parensMatch("()()()"));
+        Assert.assertFalse(parensMatch("(()))(())"));
+        Assert.assertFalse(parensMatch(")("));
+        Assert.assertFalse(parensMatch("(()"));
     }
 
 }
