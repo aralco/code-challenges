@@ -1,8 +1,8 @@
 package com.cochabamba.interview.bfa.training;
 
-import org.junit.Assert;
-
 import java.util.LinkedList;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Recordatorio {
     public static void main(String[] args)   {
@@ -15,25 +15,25 @@ public class Recordatorio {
         System.out.println("linkedList: "+linkedList);
         System.out.println("*****************************");
 
-        Assert.assertEquals("C", linkedList.get(2));
+        assertEquals("C", linkedList.get(2));
         System.out.println(linkedList.get(2));
         System.out.println("linkedList: "+linkedList);
         System.out.println("*****************************");
 
         linkedList.set(2, "shit");
         System.out.println("linkedList: "+linkedList);
-        Assert.assertEquals("shit", linkedList.get(2));
+        assertEquals("shit", linkedList.get(2));
         System.out.println(linkedList.get(2));
         System.out.println("*****************************");
 
         linkedList.add("Z");
         System.out.println("linkedList: "+linkedList);
-        Assert.assertEquals("Z", linkedList.getLast());
+        assertEquals("Z", linkedList.getLast());
         System.out.println("*****************************");
 
         String removedItem = linkedList.remove(2);
         System.out.println("linkedList: "+linkedList);
-        Assert.assertEquals("shit", removedItem);
+        assertEquals("shit", removedItem);
         System.out.println(removedItem);
         System.out.println("*****************************");
     }

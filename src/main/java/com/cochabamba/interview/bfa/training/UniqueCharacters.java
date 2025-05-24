@@ -1,56 +1,58 @@
 package com.cochabamba.interview.bfa.training;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;
 import java.util.Set;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 public class UniqueCharacters {
     public static void main(String[] args) {
-        Assert.assertTrue(hasUniqueCharactersNaiveWithoutDS("abc"));
-        Assert.assertTrue(hasUniqueCharactersNaiveWithoutDS("abcde"));
-        Assert.assertTrue(hasUniqueCharactersNaiveWithoutDS("a"));
-        Assert.assertFalse(hasUniqueCharactersNaiveWithoutDS("aba"));
-        Assert.assertFalse(hasUniqueCharactersNaiveWithoutDS("abbbba"));
-        Assert.assertFalse(hasUniqueCharactersNaiveWithoutDS("adckla"));
+        assertTrue(hasUniqueCharactersNaiveWithoutDS("abc"));
+        assertTrue(hasUniqueCharactersNaiveWithoutDS("abcde"));
+        assertTrue(hasUniqueCharactersNaiveWithoutDS("a"));
+        assertFalse(hasUniqueCharactersNaiveWithoutDS("aba"));
+        assertFalse(hasUniqueCharactersNaiveWithoutDS("abbbba"));
+        assertFalse(hasUniqueCharactersNaiveWithoutDS("adckla"));
 
-        Assert.assertTrue(hasUniqueCharactersBetterWithDS("abc"));
-        Assert.assertTrue(hasUniqueCharactersBetterWithDS("abcde"));
-        Assert.assertTrue(hasUniqueCharactersBetterWithDS("a"));
-        Assert.assertFalse(hasUniqueCharactersBetterWithDS("aba"));
-        Assert.assertFalse(hasUniqueCharactersBetterWithDS("abbbba"));
-        Assert.assertFalse(hasUniqueCharactersBetterWithDS("adckla"));
+        assertTrue(hasUniqueCharactersBetterWithDS("abc"));
+        assertTrue(hasUniqueCharactersBetterWithDS("abcde"));
+        assertTrue(hasUniqueCharactersBetterWithDS("a"));
+        assertFalse(hasUniqueCharactersBetterWithDS("aba"));
+        assertFalse(hasUniqueCharactersBetterWithDS("abbbba"));
+        assertFalse(hasUniqueCharactersBetterWithDS("adckla"));
     }
 
     @Test
     public void testWithoutDS()   {
-        Assert.assertTrue(hasUniqueCharactersNaiveWithoutDS("abc"));
-        Assert.assertTrue(hasUniqueCharactersNaiveWithoutDS("abcde"));
-        Assert.assertTrue(hasUniqueCharactersNaiveWithoutDS("a"));
-        Assert.assertFalse(hasUniqueCharactersNaiveWithoutDS("aba"));
-        Assert.assertFalse(hasUniqueCharactersNaiveWithoutDS("abbbba"));
-        Assert.assertFalse(hasUniqueCharactersNaiveWithoutDS("adckla"));
+        assertTrue(hasUniqueCharactersNaiveWithoutDS("abc"));
+        assertTrue(hasUniqueCharactersNaiveWithoutDS("abcde"));
+        assertTrue(hasUniqueCharactersNaiveWithoutDS("a"));
+        assertFalse(hasUniqueCharactersNaiveWithoutDS("aba"));
+        assertFalse(hasUniqueCharactersNaiveWithoutDS("abbbba"));
+        assertFalse(hasUniqueCharactersNaiveWithoutDS("adckla"));
     }
 
     @Test
     public void testWithDS()    {
-        Assert.assertTrue(hasUniqueCharactersBetterWithDS("abc"));
-        Assert.assertTrue(hasUniqueCharactersBetterWithDS("abcde"));
-        Assert.assertTrue(hasUniqueCharactersBetterWithDS("a"));
-        Assert.assertFalse(hasUniqueCharactersBetterWithDS("aba"));
-        Assert.assertFalse(hasUniqueCharactersBetterWithDS("abbbba"));
-        Assert.assertFalse(hasUniqueCharactersBetterWithDS("adckla"));
+        assertTrue(hasUniqueCharactersBetterWithDS("abc"));
+        assertTrue(hasUniqueCharactersBetterWithDS("abcde"));
+        assertTrue(hasUniqueCharactersBetterWithDS("a"));
+        assertFalse(hasUniqueCharactersBetterWithDS("aba"));
+        assertFalse(hasUniqueCharactersBetterWithDS("abbbba"));
+        assertFalse(hasUniqueCharactersBetterWithDS("adckla"));
     }
 
     @Test
     public void testASCII() {
-        Assert.assertTrue(hasUniqueCharactersASCII("abc"));
-        Assert.assertTrue(hasUniqueCharactersASCII("abcde"));
-        Assert.assertTrue(hasUniqueCharactersASCII("a"));
-        Assert.assertFalse(hasUniqueCharactersASCII("aba"));
-        Assert.assertFalse(hasUniqueCharactersASCII("abbbba"));
-        Assert.assertFalse(hasUniqueCharactersASCII("adckla"));
+        assertTrue(hasUniqueCharactersASCII("abc"));
+        assertTrue(hasUniqueCharactersASCII("abcde"));
+        assertTrue(hasUniqueCharactersASCII("a"));
+        assertFalse(hasUniqueCharactersASCII("aba"));
+        assertFalse(hasUniqueCharactersASCII("abbbba"));
+        assertFalse(hasUniqueCharactersASCII("adckla"));
     }
 
     public static boolean hasUniqueCharactersASCII(String string)  {

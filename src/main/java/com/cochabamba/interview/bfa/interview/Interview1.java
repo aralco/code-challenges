@@ -1,9 +1,11 @@
 package com.cochabamba.interview.bfa.interview;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.LinkedList;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class Interview1 {
 
@@ -36,13 +38,13 @@ public class Interview1 {
 
     @Test
     public void test()  {
-        Assert.assertTrue(isEven("(())"));
-        Assert.assertFalse(isEven("(()))"));
-        Assert.assertFalse(isEven("()))("));
-        Assert.assertTrue(isEven("()()()"));
-        Assert.assertFalse(isEven("(()))(())"));
-        Assert.assertFalse(isEven(")("));
-        Assert.assertFalse(isEven("(()"));
+        assertTrue(isEven("(())"));
+        assertFalse(isEven("(()))"));
+        assertFalse(isEven("()))("));
+        assertTrue(isEven("()()()"));
+        assertFalse(isEven("(()))(())"));
+        assertFalse(isEven(")("));
+        assertFalse(isEven("(()"));
     }
 
 }
