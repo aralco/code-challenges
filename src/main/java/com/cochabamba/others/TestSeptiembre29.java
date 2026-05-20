@@ -1,12 +1,11 @@
 package com.cochabamba.others;
 
 import java.util.*;
-
+import com.cochabamba.others.IMetric;
+import com.cochabamba.others.MetricImpl;
 /**
  * @author ariel.alcocer
  */
-public class TestSeptiembre29 {
-
 /*
 import java.util.*;
 
@@ -35,6 +34,7 @@ public class main {
     }
 */
 
+public class TestSeptiembre29 {
     /**
      Implements a Java equivalent to:
      SELECT
@@ -53,7 +53,7 @@ public class main {
             metricsMap.put(m.getName(),metricsMap.get(m.getName())+m.getValue());
         }
         for(Map.Entry<String,Double> entry:metricsMap.entrySet())   {
-            results.add(new MetricImpl(entry.getKey(), entry.getValue()));
+            results.add((IMetric) new MetricImpl(entry.getKey(), entry.getValue()));
         }
         return results;
     }

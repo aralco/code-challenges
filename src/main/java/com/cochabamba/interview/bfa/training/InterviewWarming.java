@@ -1,7 +1,8 @@
 package com.cochabamba.interview.bfa.training;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class InterviewWarming {
     public static void main(String[] args)   {
@@ -31,17 +32,17 @@ public class InterviewWarming {
 
     @Test
     public void testLongestPalindrome() {
-        Assert.assertEquals("aabbaa", longestPalin("aabbaa"));
-        Assert.assertEquals("aabbaa", longestPalin("aaaabbaa"));
+        assertEquals("aabbaa", longestPalin("aabbaa"));
+        assertEquals("aabbaa", longestPalin("aaaabbaa"));
     }
 
     @Test
     public void testIsPalindrome()  {
-        Assert.assertFalse(isPalindrome("ab"));
-        Assert.assertTrue(isPalindrome("aabbaa"));
-        Assert.assertFalse(isPalindrome("capic"));
-        Assert.assertTrue(isPalindrome("aca"));
-        Assert.assertFalse(isPalindrome("banana"));
-        Assert.assertTrue(isPalindrome("racecar"));
+        assertFalse(isPalindrome("ab"));
+        assertTrue(isPalindrome("aabbaa"));
+        assertFalse(isPalindrome("capic"));
+        assertTrue(isPalindrome("aca"));
+        assertFalse(isPalindrome("banana"));
+        assertTrue(isPalindrome("racecar"));
     }
 }

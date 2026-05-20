@@ -3,10 +3,14 @@ package com.cochabamba.interview.bairesdev;
 // Write a function that returns true if the brackets in a given string are balanced.
 // The function must handle parenthesis (), square brackets [], and curly braces {}.
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Map;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class MyCode {
     public static void main (String[] args) {
@@ -122,13 +126,13 @@ public class MyCode {
 
     @Test
     public void test()  {
-        Assert.assertTrue(parensMatch("(())"));
-        Assert.assertFalse(parensMatch("(()))"));
-        Assert.assertFalse(parensMatch("()))("));
-        Assert.assertTrue(parensMatch("()()()"));
-        Assert.assertFalse(parensMatch("(()))(())"));
-        Assert.assertFalse(parensMatch(")("));
-        Assert.assertFalse(parensMatch("(()"));
+        assertTrue(parensMatch("(())"));
+        assertFalse(parensMatch("(()))"));
+        assertFalse(parensMatch("()))("));
+        assertTrue(parensMatch("()()()"));
+        assertFalse(parensMatch("(()))(())"));
+        assertFalse(parensMatch(")("));
+        assertFalse(parensMatch("(()"));
     }
 
 }

@@ -1,7 +1,8 @@
 package com.cochabamba.interview.tallertech;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class CleanDemo {
 
@@ -18,6 +19,6 @@ public class CleanDemo {
 
     @Test
     public void test(){
-        Assert.assertTrue(true);
+        assertTrue(true);
     }
 }
